@@ -52,6 +52,6 @@ module.exports = {
     'radix': 1,
     'vars-on-top': 2,
     'wrap-iife': 2,               // Require immediate function invocation to be wrapped in parentheses
-    'yoda': [2, 'always']
+    'yoda': [2, 'never']
   }
 };

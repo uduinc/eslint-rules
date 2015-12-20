@@ -1,6 +1,10 @@
 {
-  // Example
+  "globals": {
+    "udu": true
+  },
   "rules": {
-    
-  }
+    "array-bracket-spacing": 0,
+    "key-spacing": 0
+  },
+  "extends": "./__eslint_rules/.eslintrc.js"
 }

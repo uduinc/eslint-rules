@@ -22,6 +22,18 @@ Each of these displays just the `scripts` object in a `package.json` file.
   ...
 }
 ```
+
+#### With different config path:
+```
+{
+  ...
+  "scripts": {
+    "lint": "eslint -c __eslint_rules/.eslintrc.js ."
+  }
+  ...
+}
+```
+
 #### With globbing (specifying which files/directories to lint)
 ```
 {
@@ -34,11 +46,12 @@ Each of these displays just the `scripts` object in a `package.json` file.
 ```
 
 #### With eslint-local:
+(Make sure you include the `extends` property in `.eslint-local.json` if you do this; see [example](.eslint-local.json)
 ```
 {
   ...
   "scripts": {
-    "lint": "eslint -c .eslintrc.js -c .eslint-local.json .",
+    "lint": "eslint .eslint-local.json .",
   }
   ...
 }
@@ -49,7 +62,7 @@ Each of these displays just the `scripts` object in a `package.json` file.
 {
   ...
   "scripts": {
-    "lint": "eslint -c .eslintrc.js -c .eslint-local.json '**/*.js' '**/.*.js'"
+    "lint": "eslint -c .eslint-local.json '**/*.js' '**/.*.js'"
   }
   ...
 }
