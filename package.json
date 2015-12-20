@@ -4,7 +4,7 @@
   "description": "ESLint settings for udu",
   "main": ".eslintrc.js",
   "scripts": {
-    "lint": "LOCAL_ESLINT='.eslint-local.json' && eslint .",
+    "lint": "eslint -c .eslintrc.js -c .eslint-local.json .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

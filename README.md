@@ -1,15 +1,16 @@
 # eslint-rules
-ESLint settings for udu
+ESLint settings for udu 
 
-### eslint-local
-To change the location of the eslint-local file, edit the `LOCAL_ESLINT` assignment in `package.json`
+#### Config file
+To change the location of the config file [default config locations](http://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy), add a `-c <config_file_path>` option to the eslint call in package.json
 
-### Config file
-To change the location of the config file [default precendence](http://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy), add a `-c <config-file-path>` option to the eslint call in package.json
+#### .eslint-local config
+To add a local config for eslint, add it using the `-c <config_file_path>` flag.
 
 ---
 
 ### Examples:
+Each of these displays just the `scripts` object in a `package.json` file.
 
 #### ESLint basic:
 ```
@@ -21,45 +22,34 @@ To change the location of the config file [default precendence](http://eslint.or
   ...
 }
 ```
-#### ESLint With globbing (to specify which files to lint)
+#### With globbing (specifying which files/directories to lint)
 ```
 {
   ...
   "scripts": {
-    "lint": "eslint \"**/*.js\" \"**/.*.js\""
+    "lint": "eslint '**/*.js' '**/.*.js'"
   }
   ...
 }
 ```
 
-#### Just eslint-local:
+#### With eslint-local:
 ```
 {
   ...
   "scripts": {
-    "lint": "LOCAL_ESLINT=../.eslint-local.json eslint",
+    "lint": "eslint -c .eslintrc.js -c .eslint-local.json .",
   }
   ...
 }
 ```
 
-#### Just config file:
+#### With eslint-local + globbing
 ```
 {
   ...
   "scripts": {
-    "lint": "eslint -c __eslint_rules/.eslintrc.js",
-  }
-  ...
-}
-```
-
-#### Both eslint-local and config:
-```
-{
-  ...
-  "scripts": {
-    "lint": "LOCAL_ESLINT=../.eslint-local.json eslint -c __eslint_rules/.eslintrc.js",
+    "lint": "eslint -c .eslintrc.js -c .eslint-local.json '**/*.js' '**/.*.js'"
   }
   ...
 }

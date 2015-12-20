@@ -27,7 +27,4 @@ config = {
     node: true
   }
 };
-if ( process.env.LOCAL_ESLINT ) {
-  config.extends.push(process.env.LOCAL_ESLINT);
-}
 module.exports = config;
