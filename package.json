@@ -4,7 +4,7 @@
   "description": "ESLint settings for udu",
   "main": ".eslintrc.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "LOCAL_ESLINT='.eslint-local.json' && eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +17,6 @@
     "rules"
   ],
   "author": "Bruce Clounie <bruce.w.clounie@gmail.com>",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/uduinc/eslint-rules/issues"
   },

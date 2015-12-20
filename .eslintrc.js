@@ -10,8 +10,9 @@
 // Make these global so that other ESLint config files can use them.
 global.MAX_STATEMENTS_IN_FN = 20;
 global.NUM_SPACES_INDENT = 2;
+var config = {};
 
-module.exports = {
+config = {
   extends: [
     'eslint:recommended',
     './possible_errors.js',
@@ -20,11 +21,13 @@ module.exports = {
     './variables.js',
     './nodejs_commonjs.js',
     './stylistic_issues.js'
-    // [Optional] Any rules in eslint-local.json override the udu defaults cloned from the repository
-    // '../.eslint-local.json'
   ],
   env: {
     es6: true,
     node: true
   }
 };
+if ( process.env.LOCAL_ESLINT ) {
+  config.extends.push(process.env.LOCAL_ESLINT);
+}
+module.exports = config;
