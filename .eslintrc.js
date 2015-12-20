@@ -15,12 +15,12 @@ var config = {};
 config = {
   extends: [
     'eslint:recommended',
-    './possible_errors.js',
-    './best_practices.js',
-    './strict.js',
-    './variables.js',
-    './nodejs_commonjs.js',
-    './stylistic_issues.js'
+    './rules/possible_errors.js',
+    './rules/best_practices.js',
+    './rules/strict.js',
+    './rules/variables.js',
+    './rules/nodejs_commonjs.js',
+    './rules/stylistic_issues.js'
   ],
   env: {
     es6: true,
