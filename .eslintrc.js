@@ -8,9 +8,10 @@
 */
 
 // Make these global so that other ESLint config files can use them.
+var config = {};
+
 global.MAX_STATEMENTS_IN_FN = 20;
 global.NUM_SPACES_INDENT = 2;
-var config = {};
 
 config = {
   extends: [
