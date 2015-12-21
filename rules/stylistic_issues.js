@@ -28,7 +28,7 @@ module.exports = {
     'no-nested-ternary': 2,
     'no-new-object': 1,
     'no-spaced-func': 2,
-    'no-trailing-spaces': 1,
+    'no-trailing-spaces': [1, { skipBlankLines: true } ],
     'no-unneeded-ternary': 1,
     'object-curly-spacing': [1, 'always'],
     'operator-assignment': [1, 'always'],
