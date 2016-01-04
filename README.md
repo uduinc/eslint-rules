@@ -1,5 +1,6 @@
 # eslint-rules
-ESLint settings for udu 
+ESLint settings for udu   
+`npm install udu-eslint-rules`
 
 #### Config file
 To change the location of the config file [default config locations](http://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy), add a `-c <config_file_path>` option to the eslint call in package.json
