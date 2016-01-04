@@ -1,5 +1,5 @@
 {
-  "name": "eslint-rules",
+  "name": "udu-eslint-rules",
   "version": "0.1.1",
   "description": "ESLint settings for udu",
   "main": ".eslintrc.js",
