@@ -16,7 +16,7 @@ module.exports = {
     'no-multiple-empty-lines': [1, { max: 2 } ],
     'func-names': 1,
     'indent': [1, global.NUM_SPACES_INDENT],
-    'key-spacing': [2, { beforeColon: false, afterColon: true } ],
+    'key-spacing': [0, { beforeColon: false, afterColon: true } ],
     'linebreak-style': [2, 'unix'],
     'max-statements': [1, global.MAX_STATEMENTS_IN_FN],
     'new-cap': 2,
